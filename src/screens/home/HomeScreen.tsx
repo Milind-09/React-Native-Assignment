@@ -1,17 +1,25 @@
-import {StyleSheet, View, Image, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Image,
+  TouchableOpacity,
+  SafeAreaView,
+} from 'react-native';
 import Header from '../../components/Header/Header';
 import TabNavigator from '../../components/Tabs/TabNavigator';
 import {Images} from '../../../assets/paths/Paths';
 
 const HomeScreen = () => {
   return (
-    <View style={styles.container}>
-      <Header />
-      <TabNavigator />
-      <TouchableOpacity style={styles.addButton}>
-        <Image source={Images.Plus} style={styles.plusIcon} />
-      </TouchableOpacity>
-    </View>
+    <SafeAreaView style={{flex: 1}}>
+      <View style={styles.container}>
+        <Header />
+        <TabNavigator />
+        <TouchableOpacity style={styles.addButton}>
+          <Image source={Images.Plus} style={styles.plusIcon} />
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
   );
 };
 
